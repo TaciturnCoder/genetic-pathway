@@ -1,5 +1,5 @@
 {
-    "name": "genetic-pathway",
+    "name": "@dwijbavisi/genetic-pathway",
     "version": "0.1.0",
     "description": "👀 Subject-observer pattern using Proxy traps",
     "main": "index.js",
