@@ -1,0 +1,23 @@
+{
+    "name": "genetic-pathway",
+    "version": "0.1.0",
+    "description": "👀 Subject-observer pattern using Proxy traps",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "lint": "npx eslint src"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/TaciturnCoder/genetic-pathway.git"
+    },
+    "author": "Taciturn Coder <taciturncoder@gmail.com>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/TaciturnCoder/genetic-pathway/issues"
+    },
+    "homepage": "https://github.com/TaciturnCoder/genetic-pathway#readme",
+    "devDependencies": {
+        "eslint": "^8.35.0"
+    }
+}
