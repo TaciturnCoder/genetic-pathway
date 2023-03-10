@@ -1,5 +1,8 @@
 export {
-    isMutable,
-    nonMutable,
-    Mutable
-} from './src/Mutable.js';
+    mutable,
+    immutable
+} from './tokens.js';
+
+export {
+    Genome
+} from './src/Genome.js';

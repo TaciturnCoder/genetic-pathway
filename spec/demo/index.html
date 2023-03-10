@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="importmap">
+        {
+            "imports": {
+                "@dwijbavisi/genetic-pathway": "/index.js"
+            }
+        }
+    </script>
+    <script type="module">
+        // Import in your project
+        import { Genome } from '@dwijbavisi/genetic-pathway';
+
+        const host = document.createElement('div');
+        const genome = new Genome(host);
+        const gene = new Proxy({}, genome);
+
+        gene['name'] = {
+            'first': 'Taciturn',
+            'last': 'Coder'
+        }
+
+        host.addEventListener(':/name/first', (e) => {
+            console.log('Property: :/name/first changed');
+            console.log(e);
+        });
+        host.addEventListener(':/name/last', (e) => {
+            console.log('Property: :/name/last changed');
+            console.log(e);
+        });
+
+        gene.name.first = 'Dwij'; // Expected output: 'Property: :/name/first changed'
+        gene.name.last = 'Bavisi'; // Expected output: 'Property: :/name/last changed'
+    </script>
+</head>
+
+<body>
+    <h1>See developer console</h1>
+</body>
+
+</html>

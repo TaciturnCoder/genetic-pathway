@@ -1,4 +1,4 @@
-# genetic-pathway [0.1.0]
+# genetic-pathway [0.2.0]
 👀 Subject-observer pattern using Proxy traps
 
 # Installation
@@ -12,23 +12,26 @@ npm i @dwijbavisi/genetic-pathway
 
 ```js
 // Import in your project
-import { Mutable } from '@DwijBavisi/genetic-pathway'
+import { Genome } from '@dwijbavisi/genetic-pathway';
 
-mutable = new Proxy({}, new Mutable(document));
-mutable.name = {
-    first: 'Taciturn',
-    last: 'Coder'
+const host = document.createElement('div');
+const genome = new Genome(host);
+const gene = new Proxy({}, genome);
+
+gene['name'] = {
+    'first': 'Taciturn',
+    'last': 'Coder'
 }
 
-document.addEventListener(':/name/first', (e) => {
+host.addEventListener(':/name/first', (e) => {
     console.log('Property: :/name/first changed');
+    console.log(e);
 });
-document.addEventListener(':/name/last', (e) => {
+host.addEventListener(':/name/last', (e) => {
     console.log('Property: :/name/last changed');
+    console.log(e);
 });
 
-mutable.name.first = 'Dwij';
-// Expected output: 'Property: :/name/first changed'
-mutable.name.last = 'Bavisi';
-// Expected output: 'Property: :/name/last changed'
+gene.name.first = 'Dwij'; // Expected output: 'Property: :/name/first changed'
+gene.name.last = 'Bavisi'; // Expected output: 'Property: :/name/last changed'
 ```
