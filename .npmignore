@@ -1,3 +1,11 @@
-.vscode/settings.json
+.vscode/**/*
 
-.eslintrc.js
+spec/coverage/**/*
+spec/demo/**/*
+**/*.spec.js
+
+.eslintrc.cjs
+jest.config.mjs
+
+node_modules/
+package-lock.json
