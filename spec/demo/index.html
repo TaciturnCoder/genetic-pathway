@@ -20,12 +20,12 @@
 
         const host = document.createElement('div');
         const genome = new Genome(host);
-        const gene = new Proxy({}, genome);
-
-        gene['name'] = {
-            'first': 'Taciturn',
-            'last': 'Coder'
-        }
+        const gene = new Proxy({
+            name: {
+                first: 'Taciturn',
+                last: 'Coder'
+            }
+        }, genome);
 
         host.addEventListener(':/name/first', (e) => {
             console.log('Property: :/name/first changed');
