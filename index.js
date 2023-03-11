@@ -1,7 +1,4 @@
-export {
-    mutable,
-    immutable
-} from './tokens.js';
+export * as tokens from './tokens.js';
 
 export {
     Genome

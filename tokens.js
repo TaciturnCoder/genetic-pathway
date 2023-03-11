@@ -1,2 +1,6 @@
-export const mutable = Symbol.for('mutable');
-export const immutable = Symbol.for('immutable');
+/**
+ * Symbol used to mark a property as immunized. Meaning, it should not
+ * be subject to any Proxy traps.
+ * @type {Symbol}
+ */
+export const immunize = Symbol.for('immunize');
